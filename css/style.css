@@ -1,0 +1,43 @@
+/* ul {
+	padding: 30px;
+	border: 1px solid red;
+}
+li {
+	list-style-type: none;
+	margin-bottom: 20px;
+	border: 1px dashed black;
+} */
+/* #elem1{
+	width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    padding: 1px;
+    background: #97FF97;
+}
+#elem2{
+	width: 140px;
+    height: 140px;
+    margin: 30px;
+    padding: 1px;
+    background: #7777FF;
+}
+#elem3{
+    width: 80px;
+    height: 80px;
+    margin: 30px;
+    padding: 1px;
+    background: #FF7D7D; */
+/* } */
+div, ul, li {
+	padding: 20px;
+}
+
+div {
+	border: 1px solid red;
+}
+ul {
+	border: 1px solid orange;
+}
+li {
+	border: 1px solid green;
+}
