@@ -41,6 +41,6 @@ ul {
 li {
 	border: 1px solid green;
 } */
-#block:not(.active) {
+/* #block:not(.active) {
 	display: none;
-}
+} */

@@ -124,9 +124,9 @@
 //     })
 // }
 // /////////////////////////////////////////////
-// let arr = [1, 2, 3, 4, 5.];
-// for (let elem of arr) {.
-//.     let ul = document.querySelector('ul');
+// let arr = [1, 2, 3, 4, 5];
+// for (let elem of arr) {
+//     let ul = document.querySelector('ul');
 //     let li = document.createElement('li');
 // 	li.textContent = elem;
 //     ul.appendChild(li);
@@ -207,5 +207,127 @@
 // 	for (let elem of subArr) {
 // 		let td = document.createElement('td');
 // 		td.textContent = elem;
-// 		.,tr.appendChild(td);Э.
-// 	}..,
+// 		tr.appendChild(td);
+// 	}
+	
+// 	table.appendChild(tr);
+// }
+//////////////////////////////
+// let arr = [[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12]];
+// let table = document.querySelector('#table');
+// for(let subArr of arr){
+//     let tr = document.createElement('tr');
+	
+// 	for (let elem of subArr) {
+// 		let td = document.createElement('td');
+// 		td.textContent = elem **2;
+// 		tr.appendChild(td);
+// 	}
+	
+// 	table.appendChild(tr);
+// }
+// let employees = [
+// 	{name: 'employee1', age: 30, salary: 400},
+// 	{name: 'employee2', age: 31, salary: 500},
+// 	{name: 'employee3', age: 32, salary: 600},
+// ];
+// let table = document.getElementById('table');
+// for (let employ of employees) {
+// 	let tr = document.createElement('tr');
+	
+// 	let td1 = document.createElement('td');
+// 	td1.textContent = employ.name;
+// 	tr.appendChild(td1);
+	
+// 	let td2 = document.createElement('td');
+// 	td2.textContent = employ.age;
+//     td2.addEventListener('click', ()=>{
+//         td2.textContent++;
+//     })
+// 	tr.appendChild(td2);
+	
+// 	let td3 = document.createElement('td');
+// 	td3.textContent = employ.salary;
+// 	tr.appendChild(td3);
+	
+// 	table.appendChild(tr);
+// }
+////////////////////////////////////////////
+// let employees = [
+// 	{name: 'employee1', age: 30, salary: 400},
+// 	{name: 'employee2', age: 31, salary: 500},
+// 	{name: 'employee3', age: 32, salary: 600},
+// ];
+// let table = document.getElementById('table');
+// for (let employ of employees) {
+// 	let tr = document.createElement('tr');
+	
+// 	let td1 = document.createElement('td');
+// 	td1.textContent = employ.name;
+// 	tr.appendChild(td1);
+	
+// 	let td2 = document.createElement('td');
+// 	td2.textContent = employ.age;
+//     td2.addEventListener('click', ()=>{
+//         td2.textContent++;
+//     })
+// 	tr.appendChild(td2);
+	
+// 	let td3 = document.createElement('td');
+// 	td3.textContent = +employ.salary;
+//     td3.addEventListener('click', ()=>{
+//         td3.textContent = +td3.textContent +td3.textContent/(100 * 0.10); 
+//     })
+// 	tr.appendChild(td3);
+	
+// 	table.appendChild(tr);
+// }
+////////////////////////////////////////////////////////////
+// let table = document.querySelector('#table');
+// let btn = document.querySelector('button');
+// let k = 1; 
+// for (let i = 0; i < 5; i++) {
+// 	let tr = document.createElement('tr');
+	
+// 	for (let i = 0; i < 5; i++) {
+// 		let td = document.createElement('td');
+		
+// 		td.textContent = k; // записываем счетчик в ячейку
+// 		k++; // увеличиваем счетчик
+		
+// 		tr.appendChild(td);
+// 	}
+	
+// 	table.appendChild(tr);
+// }
+// btn.addEventListener('click', ()=>{
+// let tr1 = document.createElement('tr');
+
+// for (let i = 0; i < 5; i++) {
+// 	let td1 = document.createElement('td');
+//     td1.textContent = k; 
+// 		k++;
+// 	tr1.appendChild(td1);
+// }
+
+// table.appendChild(tr1);
+// })
+///////////////////////////////////////////
+// let trs = document.querySelectorAll('#table tr');
+// let btn = document.querySelector('button');
+// btn.addEventListener('click', ()=>{
+//     for (let tr of trs) {
+//         let td = document.createElement('td');
+//         tr.appendChild(td);
+//     }
+// })
+////////////////////////////////////////////
+// let tds = document.querySelectorAll('#table td');
+// let btn = document.querySelector('button');
+// btn.addEventListener('click', ()=>{
+//     for (let td of tds) {
+//         td.textContent = td.textContent ** 2;
+//     }
+// })
+
+/////////////////////////////////////////
