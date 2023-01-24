@@ -111,7 +111,13 @@
 //         clock.innerHTML = now.toLocaleTimeString();
 //     }, 1000);
 //    };
-
+/////////////////////////////////////////////
+// let p = document.querySelector('p');
+// p.addEventListener('click', function() {
+// 	setTimeout(function() {
+// 		p.textContent = 'Я люблю Викусня и Настю';
+// 	}, 10000);
+// });
 
 
 
