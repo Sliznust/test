@@ -331,3 +331,290 @@
 // })
 
 /////////////////////////////////////////
+// №1⊗jsPmPrNER
+
+// Дан следующий код:
+
+// <ul id="parent">
+// 	<li>1</li>
+// 	<li>2</li>
+// 	<li>3</li>
+// </ul>
+
+// <input type="submit" id="button">
+// Сделайте так, чтобы по клику на кнопку в список добавлялся новый элемент. Сделайте так, чтобы любая li удалялась по клику на нее. Речь идет как о тех li, которые уже есть в списке, так о новых, созданных после нажатия на кнопку.
+// let parent = document.querySelector('#parent');
+// let btn = document.querySelector('#button');
+// btn.addEventListener('click', ()=>{
+//     let li = document.createElement('li');
+//     li.textContent = '!';
+//     li.addEventListener('click', ()=>{
+//         li.remove();
+//     })
+//     let liDel = document.querySelectorAll('li');
+//     for(let elem of liDel){
+//         elem.addEventListener('click', ()=>{
+//             elem.remove();
+//         })
+//     }
+//     parent.appendChild(li);
+// })
+//////////////////////////////////
+// let elem   = document.querySelector('#elem');
+// let remove = document.querySelector('#remove');
+
+// remove.addEventListener('click', function(event) {
+// 	elem.remove();
+// 	event.preventDefault(); 
+// });
+///////////////////////////////////
+// let elems = document.querySelectorAll('ul li');
+// for (let elem of elems) {
+// 	let remove = document.createElement('a');
+// 	remove.href = '';
+// 	remove.textContent = 'remove';
+// 	elem.appendChild(remove);
+	
+// 	remove.addEventListener('click', function(event) {
+// 		elem.remove();
+// 		event.preventDefault();
+// 	});
+// }
+//////////////////////////////////////
+// let trs = document.querySelectorAll('#table tr');
+
+// for (let tr of trs) {
+// 	let td = document.createElement('td');
+//     let remove = document.createElement('a');
+// 	remove.href = '';
+// 	remove.textContent = 'remove';
+	
+// 	remove.addEventListener('click', function(event) {
+// 		tr.remove();
+// 		event.preventDefault();
+// 	});
+// 	tr.appendChild(remove);
+// }
+////////////////////////////////////////////////
+// let elem = document.querySelector('#elem');
+// let input = document.querySelector('#input');
+
+// input.value = elem.textContent; // записываем в инпут текст абзаца
+
+// input.addEventListener('change', function() {
+// 	elem.textContent = this.value;
+// });
+// let elem = document.querySelector('#elem');
+
+// elem.addEventListener('click', function() {
+// 	let input = document.createElement('input');
+// 	input.value = elem.textContent;
+	
+// 	input.addEventListener('blur', function() {
+// 		elem.textContent = this.value;
+// 		this.remove(); // удалим инпут
+// 	});
+	
+// 	elem.parentElement.appendChild(input);
+// });
+///////////////////////////////////////////
+// let elem = document.querySelector('#elem');
+
+// elem.addEventListener('click', function func() {
+// 	let input = document.createElement('input');
+// 	input.value = elem.textContent;
+	
+// 	elem.textContent = '';
+// 	elem.appendChild(input);
+	
+// 	input.addEventListener('blur', function() {
+// 		elem.textContent = this.value;
+// 		elem.addEventListener('click', func); // повесим событие обратно
+// 	});
+	
+// 	elem.removeEventListener('click', func);
+// });
+//////////////////////////////////
+// let elems = document.querySelectorAll('ul li');
+
+// for (let elem of elems) {
+// 	elem.addEventListener('click', function func() {
+// 		let input = document.createElement('input');
+// 		input.value = elem.textContent;
+		
+// 		elem.textContent = '';
+// 		elem.appendChild(input);
+		
+// 		input.addEventListener('blur', function() {
+// 			elem.textContent = this.value;
+// 			elem.addEventListener('click', func);
+// 		});
+		
+// 		elem.removeEventListener('click', func);
+// 	});
+// }
+///////////////////////////////////////////////
+// №2⊗jsPmPrEGE
+
+// Дана HTML таблица. Сделайте так, чтобы по клику на любую ячейку в ней появлялся инпут для редактирования текста этой ячейки.
+// let elems = document.querySelectorAll('#table tr td');
+// for (let elem of elems) {
+//     	elem.addEventListener('click', function func() {
+//     		let input = document.createElement('input');
+//     		input.value = elem.textContent;
+            
+//     		elem.textContent = '';
+//     		elem.appendChild(input);
+            
+//     		input.addEventListener('blur', function() {
+//     			elem.textContent = this.value;
+//     			elem.addEventListener('click', func);
+//     		});
+            
+//     		elem.removeEventListener('click', func);
+//     	});
+//     }
+///////////////////////////////////////////////////
+// №1⊗jsPmPrRET
+
+// Дан следующий HTML код:
+
+// <div id="parent">
+// 	<p><span>text1</span></p>
+// 	<p><span>text2</span></p>
+// 	<p><span>text3</span></p>
+// </div>
+// Добавьте ссылку на удаление в конец каждого абзаца.
+
+// Сделайте так, чтобы по клику на span в нем появлялся инпут для редактирования.
+// let elems = document.querySelectorAll('#parent p span');
+
+// for (let elem of elems) {
+// 	elem.addEventListener('click', function func() {
+// 		let input = document.createElement('input');
+// 		input.value = elem.textContent;
+		
+// 		elem.textContent = '';
+// 		elem.appendChild(input);
+		
+// 		input.addEventListener('blur', function() {
+// 			elem.textContent = this.value;
+// 			elem.addEventListener('click', func);
+// 		});
+		
+// 		elem.removeEventListener('click', func);
+// 	});
+// }
+//////////////////////////////////////////////
+// let elems = document.querySelectorAll('#parent p span');
+
+// for (let elem of elems) {
+// 	elem.addEventListener('click', function func() {
+// 		let input = document.createElement('input');
+// 		input.value = elem.textContent;
+		
+// 		elem.textContent = '';
+// 		elem.appendChild(input);
+		
+// 		input.addEventListener('blur', function() {
+// 			elem.textContent = this.value;
+// 			elem.addEventListener('click', func);
+// 		});
+		
+// 		elem.removeEventListener('click', func);
+// 	});
+// }
+// let elems1 = document.querySelectorAll('#parent p');
+// for (let elem of elems1) {
+// 	let remove = document.createElement('a');
+// 	remove.href = '';
+// 	remove.textContent = 'remove';
+// 	elem.appendChild(remove);
+	
+// 	remove.addEventListener('click', function(e) {
+// 		elem.remove();
+// 		e.preventDefault();
+// 	});
+// }
+////////////////////////////////////////
+// let elems = document.querySelectorAll('p span');
+// for(let elem of elems){
+//     let line = document.createElement('a');
+//     line.href = '';
+//     line.textContent = 'underline';
+//     elem.insertAdjacentElement('afterEnd', line);
+//     line.addEventListener('click', (e)=>{
+//         elem.classList.add('line');
+//         line.remove();
+//         e.preventDefault();
+//     })
+// }
+// ////////////////////////////////////
+// <!-- №3⊗jsPmPrES
+
+// Дана некоторая HTML таблица. Добавьте в эту таблицу еще одну колонку со ссылкой. По нажатию на эту ссылку ряд с этой ссылкой должен стать зеленого фона.
+// №4⊗jsPmPrES
+
+// Модифицируйте предыдущую задачу так, чтобы первое нажатие по ссылке красило ряд в зеленый фон, а второе нажатие отменяло это действие.
+// let trs = document.querySelectorAll('#table tr');
+
+// for (let tr of trs) {
+// 	let td = document.createElement('td');
+//     let remove = document.createElement('a');
+// 	remove.href = '';
+// 	remove.textContent = 'remove';
+  
+	
+// 	remove.addEventListener('click', function(event) {
+// 		tr.classList.toggle('colored');
+//         // tr.classList.add('colored');
+// 		event.preventDefault();
+// 	});
+// 	tr.appendChild(td);
+//     td.appendChild(remove);
+   
+// }
+// let elem = document.querySelector('p');
+// let btn = document.querySelector('button');
+// btn.addEventListener('click', ()=>{
+// 	elem.classList.toggle('hidden');
+// });
+///////////////////////////////////////////
+// let buttons = document.querySelectorAll('button');
+// let elems   = document.querySelectorAll('p');
+
+// for (let i = 0; i < buttons.length; i++) {
+// 	buttons[i].addEventListener('click', function() {
+// 		elems[i].classList.toggle('hidden');
+// 	});
+// }
+/////////////////////////////////////////////
+// let buttons = document.querySelectorAll('button');
+
+// for (let button of buttons) {
+// 	button.addEventListener('click', function() {
+// 		this.previousElementSibling.classList.toggle('hidden');
+// 	});
+// }
+////////////////////////////////////////////////
+// let elems = document.querySelectorAll('ul li');
+
+// for (let elem of elems) {
+// 	elem.addEventListener('click', function() {
+// 		this.classList.toggle('active');
+// 	});
+// }
+// let tds = document.querySelectorAll('#table td');
+// let i = 0;
+// let colors = ['color1', 'color2', 'color3'];
+
+// for (let td of tds) {
+// 	td.addEventListener('click', function() {
+// 		this.classList.add(colors[i]);
+		
+// 		i++;
+// 		if (i == colors.length) {
+// 			i = 0;
+// 		}
+// 	});
+// }
