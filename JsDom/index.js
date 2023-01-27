@@ -77,7 +77,7 @@
 // let time = document.querySelector('input');
 
 // time.addEventListener('blur', ()=>{
-//     let arr2 = [];
+//  let arr2 = [];
 // 	let str = time.value;
 // 	let arr = str.split('.');
 // 	arr2 = arr.reverse();
@@ -291,7 +291,7 @@
 // 	let sqrt1 = '';
 // 	let sqrt2 = '';
 // 	if(a.value == 0)
-// 	return res.textContent = 'квадратное уравнение не имеет корней';;
+// 	return res.textContent = 'квадратное уравнение не имеет корней';
 // 	let d = (+b.value)**2 - (4 * (+a.value) * (+c.value));
 // 	if(d < 0){
 // 		return res.textContent = 'квадратное уравнение не имеет корней';
