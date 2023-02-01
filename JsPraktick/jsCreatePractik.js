@@ -84,4 +84,139 @@
 //     newLi.removeEventListener('click', func2)
 //   })
 // })
+// №6⊗jsPmPrEChT
 
+// Дан следующий массив с работниками:
+
+// let employees = [
+// 	{name: 'employee1', age: 30, salary: 400},
+// 	{name: 'employee2', age: 31, salary: 500},
+// 	{name: 'employee3', age: 32, salary: 600},
+// ];
+// Выведите этих работников в HTML таблице.
+let employees = [
+{name: 'employee1', age: 30, salary: 400},
+{name: 'employee2', age: 31, salary: 500},
+{name: 'employee3', age: 32, salary: 600},
+];
+let table = document.querySelector('#table');
+const name = document.querySelector('.name');
+const age = document.querySelector('.age');
+const salary = document.querySelector('.salary');
+const button = document.querySelector('button');
+for(let employ of employees){
+    let tr = document.createElement('tr');
+    let td1 = document.createElement('td');
+	td1.textContent = employ.name;
+	tr.appendChild(td1);
+
+    let td2 = document.createElement('td');
+	td2.textContent = employ.age;
+	tr.appendChild(td2);
+	
+	let td3 = document.createElement('td');
+	td3.textContent = employ.salary;
+	tr.appendChild(td3);
+	
+	table.appendChild(tr);
+    td1.addEventListener('click', function func1(){
+        let input = document.createElement('input');
+        input.value = td1.textContent;
+
+        td1.textContent = '';
+        td1.appendChild(input);
+
+        input.addEventListener('blur', function() {
+            td1.textContent = this.value;
+            td1.addEventListener('click', func1);
+        }); 
+        td1.removeEventListener('click', func1);  
+    });
+    td2.addEventListener('click', function func1(){
+        let input = document.createElement('input');
+        input.value = td2.textContent;
+    
+        td2.textContent = '';
+        td2.appendChild(input);
+    
+        input.addEventListener('blur', function() {
+            td2.textContent = this.value;
+            td2.addEventListener('click', func1);
+        }); 
+        td2.removeEventListener('click', func1);  
+    });
+    td3.addEventListener('click', function func1(){
+        let input = document.createElement('input');
+        input.value = td3.textContent;
+    
+        td3.textContent = '';
+        td3.appendChild(input);
+    
+        input.addEventListener('blur', function() {
+            td3.textContent = this.value;
+            td3.addEventListener('click', func1);
+        }); 
+        td3.removeEventListener('click', func1);  
+    });
+   
+        let newTd = document.createElement('td');
+        let aDel = document.createElement('a');
+        aDel.href = '';
+        aDel.text = 'remove';
+        tr.appendChild(newTd);
+        newTd.appendChild(aDel);
+        aDel.addEventListener('click', (e)=>{
+            tr.remove();
+            e.preventDefault();
+        })
+    }
+    button.addEventListener('click', function func4(){
+    const newRow = document.createElement('tr');
+    let nameTd = document.createElement('td');
+    nameTd.textContent = name.value;
+     newRow.appendChild(nameTd);
+     nameTd.addEventListener('click', function func5(){
+        let editName = document.createElement('input');
+        editName.value = nameTd.textContent;
+        editName.value = '';
+        nameTd.appendChild(editName);
+        
+        editName.addEventListener('blur',function(){
+            nameTd.textContent = this.value;
+            nameTd.addEventListener('click', func5)
+            });
+        nameTd.removeEventListener('click', func5);
+     });
+     let ageTd = document.createElement('td');
+     ageTd.textContent = age.value;
+     newRow.appendChild(ageTd);
+     ageTd.addEventListener('click', function func6(){
+        let editAge = document.createElement('input');
+        editAge.value = ageTd.textContent;
+        editAge.value = '';
+        ageTd.appendChild(editAge);
+        
+        editAge.addEventListener('blur',function(){
+            ageTd.textContent = this.value;
+            ageTd.addEventListener('click', func6)
+            });
+            ageTd.removeEventListener('click', func6);
+     });
+    let salaryTd = document.createElement('td');
+     salaryTd.textContent = salary.value;
+     newRow.appendChild(salaryTd);
+     salaryTd.addEventListener('click', function func7(){
+        let editSalary = document.createElement('input');
+        editSalary.value = salaryTd.textContent;
+        editSalary.value = '';
+        salaryTd.appendChild(editSalary);
+        
+        editSalary.addEventListener('blur',function(){
+            salaryTd.textContent = this.value;
+            salaryTd.addEventListener('click', func7)
+            });
+            salaryTd.removeEventListener('click', func7);
+     });
+    table.appendChild(newRow)
+    })
+    
